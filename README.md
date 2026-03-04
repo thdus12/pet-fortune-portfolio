@@ -78,7 +78,7 @@ graph TB
 | **Database** | PostgreSQL, QueryDSL |
 | **AI/LLM** | OpenAI GPT-4o, 3-Stage Prompt Pipeline |
 | **천체 계산** | Astronomy Engine (NASA JPL Ephemeris) |
-| **인증** | OAuth2 (Google, Kakao), JWT (Access/Refresh/Anonymous Token) |
+| **인증** | OAuth2 (Google, Kakao), JWT (Access/Refresh Token) |
 | **결제** | Toss Payments (토스페이먼츠) |
 | **실시간** | SSE (Server-Sent Events) |
 | **배포** | Docker, Nginx |
