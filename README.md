@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://pet-fortune.com/logo.png" alt="꼬순내 신당" width="300">
+  <img src="https://pet-fortune.codism.co.kr/logo.png" alt="꼬순내 신당" width="300">
 </p>
 
 <p align="center">출생 정보 기반 AI 별자리 성격 분석 & 반려동물 운세 플랫폼</p>
