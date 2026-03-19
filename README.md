@@ -83,9 +83,9 @@ graph TB
 | **인증** | OAuth2 (Google, Kakao), JWT (Access/Refresh/Anonymous Token) |
 | **결제** | Toss Payments (토스페이먼츠) |
 | **실시간** | SSE (Server-Sent Events) |
-| **API 코드 생성** | Orval (OpenAPI → TypeScript 클라이언트) |
+| **API 코드 생성** | Orval (OpenAPI spec → TypeScript API 클라이언트 자동 생성) |
 | **배포** | Docker, Nginx |
-| **문서화** | Swagger (SpringDoc OpenAPI 3.0) |
+| **API 문서** | Scalar (SpringDoc OpenAPI 3.0 기반 인터랙티브 API 문서) |
 
 <br>
 
@@ -220,6 +220,11 @@ public SseEmitter generateReportStream(@Valid AstrologyRequest request) {
 **문제**: 비즈니스 궁합에서 동료/상사-부하 등 관계 유형에 따라 분석 프레임이 달라져야 하지만, LLM이 모든 관계를 동일하게 해석
 
 **해결**: `businessRelation` 필드를 도입하여 직장 내 관계(동료/상사/부하)를 프롬프트에 전달. 관계 유형별 해석 가이드(수평 협업 vs 상하 관계 프레임)를 프롬프트에 명시. 모순 입력(둘 다 상사 등) 시 중립 프레임으로 폴백
+
+### API 스펙 기반 프론트-백 동기화
+**문제**: 백엔드 API가 변경될 때마다 프론트엔드의 타입 정의와 API 호출 코드를 수동으로 맞춰야 해서 불일치 발생
+
+**해결**: SpringDoc OpenAPI로 API 스펙을 자동 생성하고, Orval로 OpenAPI spec → TypeScript API 클라이언트를 자동 생성. 백엔드 DTO 변경 시 `orval` 재실행만으로 프론트엔드 타입/API 코드가 동기화. Scalar를 통해 인터랙티브 API 문서도 함께 제공
 
 ### 리포트 공유 시스템
 **문제**: 인증 없이도 리포트를 공유할 수 있어야 함
