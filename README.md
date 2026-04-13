@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="https://kkosunne-sindang.com">
-    <img src="https://img.shields.io/badge/Live-pet--fortune.codism.co.kr-blueviolet?style=for-the-badge" alt="Live Demo">
+    <img src="https://img.shields.io/badge/Live-kkosunne--sindang.com-blueviolet?style=for-the-badge" alt="Live Demo">
   </a>
 </p>
 
